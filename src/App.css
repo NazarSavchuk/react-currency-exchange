@@ -16,3 +16,15 @@ a {
 .header-link {
   color: #292929;
 }
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  transform: translateX(-100%);
+  right: 0;
+  bottom: 1rem;
+}
+.social-links a svg {
+  fill: #37474f;
+}

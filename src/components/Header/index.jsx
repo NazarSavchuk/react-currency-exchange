@@ -1,6 +1,7 @@
 import React from "react";
 import { AppBar, Container, Typography, Button } from "@mui/material";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./Header.scss";
 
 const Header = () => {
   return (
@@ -8,7 +9,12 @@ const Header = () => {
       <AppBar position="static" sx={{ padding: "0.7rem 0" }}>
         <Container
           maxWidth="lg"
-          sx={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+          sx={{
+            display: "flex",
+            gap: "1rem",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}>
           <Link to="/">
             <Typography
               variant="h5"
@@ -17,22 +23,24 @@ const Header = () => {
               Currency Exchange
             </Typography>
           </Link>
-          <Link to="/">
-            <Button
-              color="neutral"
-              variant="contained"
-              sx={{ padding: "0.7rem 2rem", marginLeft: "2rem" }}>
-              MAIN
-            </Button>
-          </Link>
-          <Link to="/calc">
-            <Button
-              color="neutral"
-              variant="contained"
-              sx={{ padding: "0.7rem 2rem" }}>
-              CALC
-            </Button>
-          </Link>
+          <div className="header-links">
+            <Link to="/">
+              <Button
+                color="neutral"
+                variant="contained"
+                sx={{ padding: "0.7rem 2rem", marginLeft: "2rem" }}>
+                MAIN
+              </Button>
+            </Link>
+            <Link to="/calc">
+              <Button
+                color="neutral"
+                variant="contained"
+                sx={{ padding: "0.7rem 2rem" }}>
+                CALC
+              </Button>
+            </Link>
+          </div>
         </Container>
       </AppBar>
     </header>

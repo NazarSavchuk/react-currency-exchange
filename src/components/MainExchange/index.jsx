@@ -2,16 +2,7 @@ import React, { useEffect, useState } from "react";
 import Dropdown from "react-dropdown";
 import axios from "axios";
 import "./MainExchange.scss";
-import {
-  Container,
-  Box,
-  TextField,
-  Button,
-  FormControl,
-  Select,
-  InputLabel,
-  MenuItem,
-} from "@mui/material";
+import { Container, Box, TextField, Button } from "@mui/material";
 
 const MainExchange = () => {
   const [from, setFrom] = useState("usd");
