@@ -54,6 +54,7 @@ const MainExchange = () => {
           component="form"
           noValidate
           autoComplete="off"
+          className="main-exchange"
           sx={{
             display: "flex",
             gap: "1rem",

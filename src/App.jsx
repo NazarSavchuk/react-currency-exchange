@@ -1,5 +1,4 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import MainExchange from "./components/MainExchange";
 import "./App.css";
@@ -15,10 +14,7 @@ export default function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <Header />
-        <Routes>
-          <Route exact path="/" element={<MainExchange />} />
-          <Route path="calc" element={<h2>Hello</h2>} />
-        </Routes>
+        <MainExchange />
       </ThemeProvider>
       <Container
         maxWidth="lg"
